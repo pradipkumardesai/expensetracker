@@ -1,0 +1,9 @@
+<div style="padding-left: 15px;">
+    
+    <div style="display: flex;height: 35px;border: 1px solid gray;margin: 10px;padding: 5px;" *ngFor="let catagory of catagories">
+      <div style="width: 300px;" ><b> {{this.catagory.CatDes}}</b></div>
+      <div style="width: 200px;"> {{this.catagory.CatLimit}}</div>
+      <div style="width: 200px;"> {{catCurrBal[this.catagory.CatId]}}</div>
+      <div style="width: 200px;"> {{catCurrBal[this.catagory.CatId] ? this.catagory.CatLimit - catCurrBal[this.catagory.CatId] : this.catagory.CatLimit}}</div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<div style="display: flex;padding-left: 15px;">
+
+  <div style="display: flex;">
+    <div style="padding: 5px ;">Expense Month:</div>
+    <div>
+
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{selectedMonth.value}}</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button *ngFor="let month of monthLookup" (click)="setMonth(this.month)" class="dropdown-item">{{this.month.value}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex;">
+    <div style="padding: 5px ;">Expense Year:</div>
+    <div>
+
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>{{selectedYear}}</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+          <button *ngFor="let year of yearLookUp" (click)="setYear(this.year)" class="dropdown-item">{{this.year}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex;">
+      <div style="padding: 5px ;">Expense Catagory:</div>
+      <div>
+  
+        <div ngbDropdown class="d-inline-block">
+          <button class="btn btn-outline-primary" id="dropdownBasic3" ngbDropdownToggle>{{selectedcat.CatDes}}</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic3">
+            <button *ngFor="let cat of allCatagories" (click)="setCat(this.cat)" class="dropdown-item">{{this.cat.CatDes}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+<div style="margin: 10px 0px 0px 15px;">
+  
+   
+    
+    <div style="display: flex;height: 35px;border: 1px solid gray;margin: 10px;padding: 5px;" *ngFor="let exp of expenses | customDate:selectedMonth.id:selectedYear:selectedcat.CatId">
+        <div style="width: 300px;" ><b> {{this.exp.ExpDes}}</b></div>
+        <div style="width: 200px;"> {{this.exp.ExpDate | date:'dd-MM-yyyy' }}</div>
+        <div style="width: 200px;"> {{this.exp.ExpAmt}}</div>
+        <div style="width: 200px;"> {{this.exp.Expcat}}</div>
+      </div>
+</div>

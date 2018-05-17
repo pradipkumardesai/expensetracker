@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="expdefault-Web.config Connection String" description="expdefault Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:expnsetracker.database.windows.net,1433;Initial Catalog=ExpenseTracker;Persist Security Info=False;User ID=Pradip;Password=MYpc1928*;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\pdesai\\documents\\visual\ studio\ 2017\\Projects\\ExpenseTracker\\ExpTracker\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='expdefault']/@connectionString" />
+  </parameter>
+</parameters>

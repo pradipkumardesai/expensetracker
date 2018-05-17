@@ -1,0 +1,24 @@
+<div>
+  <div> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <b>Expense Tracker</b>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div style="margin-left: 10px;background: antiquewhite;" class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#" [routerLink]="['/catagories']" routerLinkActive="router-link-active" >Overview <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#" [routerLink]="['/expenses']" routerLinkActive="router-link-active" >Expenses Log</a>
+          <a class="nav-item nav-link" href="#" [routerLink]="['/addexpense']" routerLinkActive="router-link-active">Add Expense</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
+
+
+
